@@ -1,0 +1,41 @@
+[package]
+name = "serp-staking-pool"
+version = "3.0.0"
+authors = ["Setheum Labs"]
+edition = "2018"
+license = "Apache-2.0"
+homepage = "https://setheum.xyz"
+repository = "https://github.com/Setheum-Labs/serp-staking/"
+description = "Serp Staking Pools for Setheum SERP staking pallet"
+[dependencies]
+serde = { version = "1.0.124", optional = true }
+codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false }
+frame-support = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+frame-system = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+orml-tokens = { path = "../../orml/tokens", default-features = false }
+orml-traits = { package = "orml-traits", path = "../../orml/traits", default-features = false }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+sp-std = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+support = { package = "module-support", path = "../support", default-features = false }
+primitives = { package = "setheum-primitives", path = "../../primitives", default-features = false }
+
+[dev-dependencies]
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+sp-io = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+pallet-balances = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false }
+orml-currencies = { path = "../../orml/currencies", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+	"serde",
+	"codec/std",
+	"frame-support/std",
+	"frame-system/std",
+	"orml-tokens/std",
+	"orml-traits/std",
+	"sp-runtime/std",
+	"sp-std/std",
+	"support/std",
+	"primitives/std",
+]
