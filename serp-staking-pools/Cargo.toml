@@ -3,6 +3,7 @@ name = "serp-staking-pool"
 version = "3.0.0"
 authors = ["Setheum Labs"]
 edition = "2018"
+license = "Apache-2.0"
 homepage = "https://setheum.xyz"
 repository = "https://github.com/Setheum-Labs/serp-staking/"
 description = "Serp Staking Pools for Setheum SERP staking pallet"
